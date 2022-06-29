@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  background: #535971;
+  width: 100%;
+  height: 436px;
+}
+body  {
+  font-family: 'Poppins', sans-serif;  
+  background: #EFEFEF;
+  margin: 140px auto 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.page {
+  margin: 0 auto;
+  width: 750px;
+}
+
+header {
+  color: #FFFFFF;  
+  width: 417px;
+}
+
+header h1 {
+  font-weight:400;
+  font-size: 48px;
+  line-height: 60px;
+}
+
+header p {
+  font-size: 20px;
+  line-height: 30px;
+  margin-top: 18px;
+  margin-bottom: 58px;
+}
+
+h1, legend, button  {
+  font-family: 'Staatliches', cursive;  
+}
+
+legend span {
+  font-family: 'Poppins', sans-serif; 
+  color: #797581;
+  font-size: 10px;
+  line-height: 20px;  
+}
+#mentor-form {
+  background: #FFFFFF;
+  border-radius: 20px 20px 0 0;
+  padding: 64px;
+}
+
+fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.fieldset-wrapper {
+  margin-top: 30px;
+}
+
+fieldset legend {
+  color: #535971;
+  font-size: 24px;
+  line-height: 34px;
+  
+  border-bottom: 1px solid #E6E6F0;
+  padding-bottom: 16px;
+  width: 100%;
+}
+
+.name {
+  display: flex;
+  gap: 22px;
+  margin-top: 20px;
+  
+}
+
+fieldset div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  
+}
+
+label {
+  color: #4E4958;
+  font-size: 14px;
+  line-height: 24px;
+  margin-top: 16px;
+  margin-bottom: 8px;  
+}
+
+label span {
+  color: #C1BCCC;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+label span:hover {
+  color: #797581;
+}
+
+input {
+  height: 56px;
+  border: 1px solid #E6E6F0;
+  border-radius: 8px;
+  background: #FAFAFC;
+}
+
+.mentorship-legend {
+  border: none;
+  font-size: 20px;
+  line-height: 34px; 
+  margin-top: 32px;
+  padding-bottom: 0;
+}
+
+#mentorship2-legend {
+  margin-top: 16px;
+}
+
+.mentorship_first {
+  display: flex;  
+}
+
+.mentorship_first label, .mentorship_second label {
+  margin-top: 8px;
+}
+
+.mentorship_second {
+  display: flex;
+  
+}
+
+.mentor-date {
+  width: 100%;
+  margin-right: 21px;
+}
+
+.mentor-time-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;  
+}
+
+footer {
+  height: 160px;
+  background: #535971;
+  border-radius: 0 0 20px 20px;
+  margin-bottom: 30px;
+  padding: 52px 71px;
+  display: flex;
+  align-items: center;
+
+}
+
+button {
+  width: 100%;
+  height: 56px;
+  background: #FF5374;
+  border: none;
+  border-radius: 20px;
+  color: #FFFFFF
+}
+
+button:hover {
+  background:#e24766;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
