@@ -1,0 +1,261 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 465px;
+  background: #293241;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  
+  margin: 0 auto;
+
+  background: #BFD7E4;
+}
+
+header {
+  padding-top: 107px;
+  color: #FFFFFF;
+  text-align: center;  
+}
+
+header h1, legend, button {
+  font-family: 'Staatliches', cursive;
+  font-weight: 400;
+  text-align: center;
+}
+
+
+header h1 {
+  font-size: 36px;
+  line-height: 45px;  
+}
+
+header p {
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 2px;
+  height: 46px;
+}
+
+#personal-info-legend {
+  background: #F67669;
+  color: #FFFFFF;
+  font-size: 24px;
+  line-height: 34px;
+  
+  margin-top: 25px;
+  border: none;
+  border-radius: 20px 20px 0 0;
+  height: 133px;
+  
+  padding: 50px;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+
+  background: #FFFFFF;
+  padding: 0 64px 64px;
+  border: none;
+  border-radius: 0 0 20px 20px;
+  width: 750px;
+   
+}
+
+fieldset {
+  border: none;
+}
+
+.fieldset-wrapper {
+  border: none;
+  margin: 32px auto 0;  
+}
+
+label {
+font-size: 14px;
+line-height: 24px;
+color: #4E4958;
+}
+
+input {
+  height: 56px;
+  background: #FAFAFC;
+
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: #293241;
+    
+  border: 1px solid #E6E6F0;
+  border-radius: 8px;
+  width: 100%;
+  margin-top: 8px;
+  padding: 10px;
+}
+
+span {
+font-size: 12px;
+line-height: 20px;
+color: #87838f;
+}
+
+#personal-info {
+  
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;  
+}
+
+
+
+.input-wrapper {
+  width: 300px;
+}
+
+.fieldset-wrapper legend {
+  font-size: 24px;
+  line-height: 34px;
+  color: #253B51;
+
+  border-bottom: 1px solid #E6E6F0;
+  padding: 8px;
+}
+
+#mentor-info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 31px;
+}
+
+#mentor-info select {
+  height: 56px;
+  background: #FAFAFC;
+  font-size: 16px;
+  color: #293241;
+  padding: 12px;
+  margin-top: 8px;
+  margin-bottom: 32px;
+
+
+  border: 1px solid #E6E6F0;
+  border-radius: 8px;
+  width: 300px;
+
+  appearance: none;
+  -webkit-appearance: none;  
+
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 10L12 14L16 10' stroke='%239C98A6' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: right 5px top 50%;
+}
+
+#mentor-info textarea {
+  height: 167px;
+  background: #FAFAFC;
+  padding: 10px;
+
+  color: #293241;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+
+
+  border: 1px solid #E6E6F0;
+  border-radius: 8px;
+  margin-top: 8px;  
+}
+
+.checkbox-wrapper {
+  margin-top: 30px;
+  position: relative;
+}
+
+.checkbox-wrapper label {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px
+}
+
+.checkbox-wrapper input{
+  position: absolute;  
+  top: 0;
+  left: 0;
+
+  opacity: 0;
+
+  height: 24px;
+  width: 24px;
+}
+  
+.checkbox-wrapper label::before {
+  content: '';
+  height: 24px;
+  width: 24px;
+  border: 1px solid #E6E6F0;
+  border-radius: 8px;
+  display: block;
+}
+
+.checkbox-wrapper input:checked + label::before {
+  background-image: url("data:image/svg+xml,%3Csvg width='18' height='14' viewBox='0 0 18 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 11.17L1.83 7L0.410004 8.41L6 14L18 2L16.59 0.589996L6 11.17Z' fill='%2342D3FF'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.checkbox-wrapper input:focus + label::before {
+  outline: 2px solid black;
+}
+
+#next-mentorship-date {
+  display: flex;
+  margin-top: 31px;
+  margin-bottom: 64px;
+  gap: 10px;
+     
+}
+
+.input-wrapper-next {
+  width: 140px;
+}
+
+#next-mentorship-date > div:nth-child(1) {
+  width: 300px;
+  margin-right: 22px;
+}
+
+button {
+  height: 51px;
+  background: #F67669;
+  color: #FFFFFF;
+
+  font-size: 20px;
+  line-height: 26px;
+
+  border: none;
+  border-radius: 8px;
+}
+
+button:hover {
+  background: #eb5a4a;  
+  cursor: pointer;
+}
+
