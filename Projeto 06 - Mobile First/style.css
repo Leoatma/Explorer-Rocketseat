@@ -10,12 +10,14 @@
   --bg-primary: hsla(233, 100%, 97%, 1);
   --bg-secondary: hsla(312, 91%, 96%, 1);
 
-  --fc--header: hsla(0, 0%, 100%, 1);
+  --fc-header: hsla(0, 0%, 100%, 1);
   --fc-text: hsla(274, 84%, 12%, 1);
   --fc-headings: hsla(232, 17%, 35%, 1);
 
   --ff--primary: 'Staatliches', cursive;
   --ff-secondary: 'Palanquin', sans-serif;
+  --ff-foot:'Open Sans', sans-serif;
+  --ff-alternative: 'Roboto', sans-serif;
 
   font-size: 62.5%;
   --fs-body: 2rem;
@@ -26,13 +28,14 @@ body  {
   text-align: center;
   font-family: var(--ff--primary);
   font-size: var(--fs-body);  
-  width: 38.4rem;
-  margin: 0 auto;
+  max-width: clamp(38.4rem, 30rem + 100vw , 128rem);
+  max-height: 72rem;
+  margin: 0 auto;  
 }
 
 header {
   background: var(--bg-header);
-  height: 27.9rem;  
+  max-height: 72rem;
 }
 
 header img {
@@ -49,7 +52,7 @@ header img:hover {
 }
 header h1 {
   background: var(--bg-heading);
-  height: 4.9rem;
+  min-height: 4.9rem;
   padding: 7px;    
   
   color: var(--fc--header);
@@ -83,14 +86,13 @@ header h1 {
     color: green;
   }
 }
-main {
-  background: var(--bg-primary);
-  padding: 0 3rem 6rem;
-}
 
-main p {
+header p {
+
+  background: var(--bg-primary);
+    
   font-family: var(--ff-secondary);
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   color: var(--fc-text);
   line-height: 1.5rem;  
 
@@ -98,12 +100,15 @@ main p {
   align-items: center;
   text-align: center;
 
-  padding: 3rem 0 6rem;
-  transition: 1s;
+  padding: 4rem 3rem 0;  
 }
-main p:hover {
-  transform: scale(1.1);
+
+.page {
+  background: var(--bg-primary);
+  padding: 6rem 3rem 5rem;
+  margin-bottom: 5rem;
 }
+
 
 .cards {
   display: flex;
@@ -121,6 +126,12 @@ main p:hover {
   
   filter: saturate(1.7);    
 }
+
+img {
+  width: 100%;
+  height: auto;
+}
+
 .card img {
   animation: shining-topdown 2s;
 }
@@ -170,5 +181,129 @@ main p:hover {
   }
   
 }
+
+#mobile-hidden {
+  display: none;  
+}
+
+footer {
+  font-family: var(--ff-foot);
+  color: var(--fc-headings);
+  padding-top: 5rem;
+
+
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 2.8rem;
+  
+}
+
+footer a{
+font-weight: 700;
+text-decoration: none;
+color: var(--fc-headings);
+}
+
+footer a:hover {
+  color: var(--fc-text)
+}
+
+@media (min-width: 768px) {
+  body { 
+    display: grid;
+    grid-template-areas: 
+    "A B" 
+    "A B";
+    grid-template-columns: 30% 70%;     
+    
+    margin: 5rem auto;
+    
+  }
+  
+  header {    
+    max-height: 72rem;
+    grid-area: A;
+  }
+
+  header img {
+    min-width: 13.7rem;
+    min-height: 13.7rem;
+    margin: 3.2rem auto 3.2rem;  
+    transition: all 2s;
+  }
+  
+  header p {
+    background: var(--bg-header);
+
+    font-family: var(--ff-alternative);
+    font-size: 1.6rem;
+    color: #FFFFFF;
+    line-height: 2rem;
+    
+    
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    padding: 4rem 5rem;      
+    }
+  
+  .page {
+    background: #FFFFFF;    
+    grid-area: B;
+    max-height: 72rem;    
+  }
+
+  main {    
+    max-height: 59rem;
+    max-width: 90.3rem;
+    padding-left: 9.8rem; 
+    }
+
+  .cards {
+    display: grid;
+    grid-template-areas:
+    "img1 img2 img3"
+    "img4 img2 img6"
+    "img4 img5 img6";  
+    grid-template-columns: 1fr 1fr 1fr;  
+    gap: 3.2rem;       
+  }
+
+  .cards div:nth-child(1) {
+    grid-area: img1;
+  }
+
+  .cards div:nth-child(2) {
+    grid-area: img2;
+  }
+
+  .cards div:nth-child(3) {
+    grid-area: img5;
+  }
+
+  .cards div:nth-child(4) {
+    grid-area: img4;
+  }
+
+  .cards div:nth-child(5) {
+    grid-area: img3;
+  }
+
+  .cards div:nth-child(6) {
+    grid-area: img6;
+  }
+      
+  #mobile-hidden {
+    display:inherit;  
+  }
+
+  footer {    
+    height: 12.4rem; 
+    
+  }
+
+}
+
 
 
