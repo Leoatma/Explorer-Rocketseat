@@ -122,9 +122,9 @@ header p {
 }
 
 .card:hover {
-  transform: scale(1.1);
-  
-  filter: saturate(1.7);    
+  transform: scale(1.1);  
+  filter: saturate(1.7);
+  cursor: pointer;  
 }
 
 img {
@@ -226,8 +226,7 @@ footer a:hover {
   }
 
   header img {
-    min-width: 13.7rem;
-    min-height: 13.7rem;
+    
     margin: 3.2rem auto 3.2rem;  
     transition: all 2s;
   }
