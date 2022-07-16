@@ -1,0 +1,218 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-button: #bce7a7;
+
+  --ff-heading: 'Open Sans', sans-serif;
+  --ff-text: 'Cairo', sans-serif;
+
+  --fc--header: rgb(0, 4, 255);
+  --fc--text: rgb(45, 43, 51);
+  --fc--footer: rgb(189, 185, 185);
+  --fc-button: rgb(184, 8, 8);
+
+  font-size: 62.5%;
+  --fs-heading: clamp(1.3rem, .5rem + 2vw, 2rem);
+  --fs-text: clamp(1.2rem, .3rem + 2vw, 2rem);  
+}
+
+body {
+  position: relative;
+  margin: 0 auto;
+}
+
+body img {
+  position: absolute;
+  z-index: -1;
+  width: 100vw;
+  object-fit: cover;
+  height: 100%;
+  opacity: 0.45;
+}
+
+.page {
+  padding: 5rem 3rem;
+  text-align: center;
+  
+  
+}
+header {
+  font-family: var(--ff-heading);
+  color: var(--fc--header);
+  font-size: var(--fs-heading);
+  font-style: italic;
+  text-transform: capitalize;
+
+  border-bottom: 1px solid rgb(141, 138, 138);
+  border-width: 100%;
+
+  padding-bottom: 3rem;
+  margin-bottom: 3rem;
+  
+}
+
+header h1 {
+  font-weight: 700;
+  letter-spacing: .2rem;
+  line-height: 4rem;
+}
+
+header p {
+  font-size: var(--fs-text);
+  color:  rgb(26, 43, 196);
+  margin-top: 1rem;
+}
+
+main {
+  font-size: var(--fs-text);
+  color: var(--fc--text);
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+
+  padding-bottom: 5rem;
+  border-bottom: 1px solid rgb(141, 138, 138);
+  border-width: 100%;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  
+}
+
+section p {
+  text-align: justify;
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+  align-items: center;
+
+  font-size: var(--fs-heading);
+  margin: 2rem auto;
+}
+
+aside li {
+  list-style: none;
+}
+
+aside button {
+  font-family: var(--ff-heading);
+  font-size: clamp(1.1rem, .4rem + 1.2vw, 1.8rem);
+  color: var(--fc-button);
+  font-weight: 700;
+  background: var(--bg-button);
+  padding: 1rem;
+  width: fit-content;
+  border: none;
+  border-radius: 6px; 
+  transition: 300ms; 
+}
+
+aside button:hover {
+  background: #86f34f;
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+footer {
+
+  font-family: var(--ff-heading);
+  font-size: clamp(1rem, .4rem + 1.2vw, 1.4rem);
+  border-top: 1px solid rgb(141, 138, 138);
+  border-width: 100%;
+  padding-top: 1rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: inherit;
+}
+
+footer a:hover {
+font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  
+  .page {
+    padding: 8rem 4rem;    
+  }
+  
+  main {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  article {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    
+  
+    padding: 5rem;   
+    border: none; 
+  }
+  
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    text-align: start;    
+  }
+  
+  aside {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: right;
+    padding: 4rem 0 0 5rem;
+    margin: 3rem 0;
+    width: 100%;
+    
+  
+    font-size: clamp(1.2rem, .4rem + 1.2vw, 1.8rem);
+    
+  }
+  
+  aside li {
+    list-style: none;
+  }
+  
+  aside button {
+    font-family: var(--ff-heading);
+    font-size: clamp(1.1rem, .1rem + 1vw, 1.4rem);
+    color: var(--fc-button);
+    font-weight: 700;
+    background: var(--bg-button);
+    padding: 1rem;
+    width: fit-content;
+    border: none;
+    border-radius: 6px; 
+    transition: 300ms; 
+  }
+  
+  aside button:hover {
+    background: #86f34f;
+    cursor: pointer;
+    transform: scale(1.05);
+  }
+  
+  footer {
+    border-top: 1px solid rgb(141, 138, 138);
+    border-width: 100%;
+    padding-top: 1rem;
+  }
+}  
