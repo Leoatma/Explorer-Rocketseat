@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: radial-gradient(circle, rgba(176,36,51,1) 3%, rgba(0,0,0,1) 100%);
+
+  --fc-heading: gold;
+  --fc-body: lightgray;
+  --fc-span: rgb(59, 0, 78);
+
+  font-size: 62.5%;
+  --fs-body: clamp(2rem, 1rem + 1.7vw, 4rem);
+  --fs-heading: clamp(3rem, 3rem + 2vw, 10rem);
+  --fs-alternative: clamp(2.5rem, 3rem + 2vw , 6rem); 
+
+  --ff-body: 'Jolly Lodger', cursive;
+  --ff-heading:  'Creepster', cursive;  
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  
+
+  margin: 0 auto ;
+  height: 110%;
+  padding-bottom: 5rem;
+  width: 100vw;
+  
+
+  background: var(--bg-color);
+  background-repeat: no-repeat;
+  color: var(--fc-body);
+  font-size: var(--fs-body);
+  font-family: var(--ff-body);
+}
+
+main h1 {
+  color: var(--fc-heading);
+  font-size: var(--fs-heading);
+  font-family: var(--ff-heading);
+  font-weight: 400;
+  letter-spacing: .3rem;
+
+  margin-bottom: 8rem;
+  padding-top: 7rem;
+}
+
+main img {
+  width: clamp(16rem, 15rem + 7vw, 50rem);
+  height: clamp(16rem, 15rem + 7vw, 50rem);
+  object-fit: cover;
+  
+  border-radius: 50%;
+  transition: 800ms;
+  animation: moving 10s alternate infinite;
+}
+
+main img {
+  transform: scale(1.2);
+}
+
+@keyframes moving {
+  from {
+    transform:rotateZ(3deg); 
+  }
+  50% {
+    transform: rotateZ(-3deg);    
+  }
+  to {
+    transform: rotateZ(3deg);    
+  }
+}
+
+main p {
+  color: var(--fc-text);
+  letter-spacing: .1rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  margin-top: 3rem;  
+}
+
+main p span {
+  color: var(--fc-span);
+  font-size: var(--fs-alternative);  
+  font-family: var(--ff-heading);
+  font-weight: 500;
+  letter-spacing: .5rem;
+}
+
+button {
+  font-family: var(--ff-heading);
+  color: red;
+  background-color: black;
+  font-size: var(--fs-body);
+ 
+  
+
+  border: none;
+  border-radius: 8px;
+  width: 80%;
+  margin-top: 2rem;
+  padding: 2rem;
+  transition: 400ms;
+}
+
+button:hover {
+  color: rgb(31, 231, 5);
+  cursor: pointer;
+  transform: scale(1.02);
+}
+
